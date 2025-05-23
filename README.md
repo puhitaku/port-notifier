@@ -58,6 +58,31 @@
 1. Run it.
 
 
+# Config file
+
+```toml
+# Title: the notification title.
+Title = "Port Notifier"
+
+# MessageOnConnection: format string of the connection's body.
+# %s will be replaced by the TTY/COM port name.
+MessageOnConnection = "Connected: %s"
+
+# MessageOnDisconnection: format string of the disconnection notification's body.
+# %s will be replaced by the TTY/COM port name.
+MessageOnDisconnection = "Disconnected: %s"
+
+# DetectConnection: true to notify connection events. false to disable it.
+DetectConnection = true
+
+# DetectDisconnection: true to notify disconnection events. false to disable it.
+DetectDisconnection = true
+
+# Verbose: enable debug log.
+Verbose = false
+```
+
+
 # Caveats
 
 - Port Notifier uses [gen2brain/beeep](https://github.com/gen2brain/beeep) as a notification backend. Some limitations originate from it.
